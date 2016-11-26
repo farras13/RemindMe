@@ -6,4 +6,5 @@
     <string name="navigation_view_item_1">Home</string>
     <string name="navigation_view_item_2">Help</string>
     <string name="navigation_view_item_3">About us</string>
+    <string name="action_settings">Settings</string>
 </resources>

@@ -1,7 +1,5 @@
 package id.sch.smktelkom_mlg.project.xirpl609182736.remindme;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -14,7 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class NavHome extends AppCompatActivity {
 
     //Mendefinisikan variabel
     private Toolbar toolbar;
@@ -119,32 +117,5 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    public void onBackPressed() {
-
-
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        //pesan keluar
-        builder.setMessage("Apakah Anda Ingin Keluar?")
-                .setCancelable(false)
-                //Button Keluar
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        finish();
-                        moveTaskToBack(true);
-                        System.exit(0);
-                    }
-                })
-                //Button Batal
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
-                    }
-                });
-        AlertDialog alert = builder.create();
-        alert.show();
-
-    }
-
 }
+

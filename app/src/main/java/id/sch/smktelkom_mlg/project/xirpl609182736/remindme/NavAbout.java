@@ -1,7 +1,5 @@
 package id.sch.smktelkom_mlg.project.xirpl609182736.remindme;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -14,7 +12,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class NavAbout extends AppCompatActivity {
+
 
     //Mendefinisikan variabel
     private Toolbar toolbar;
@@ -24,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_nav_about);
+
 
         // Menginisiasi Toolbar dan mensetting sebagai actionbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
         //Mengatur Navigasi View Item yang akan dipanggil untuk menangani item klik menu navigasi
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-
             // This method will trigger on item Click of navigation menu
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
@@ -94,10 +93,12 @@ public class MainActivity extends AppCompatActivity {
 
         //memanggil synstate
         actionBarDrawerToggle.syncState();
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.navigation, menu);
         return true;
@@ -105,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
@@ -117,34 +119,5 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
-    @Override
-    public void onBackPressed() {
-
-
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        //pesan keluar
-        builder.setMessage("Apakah Anda Ingin Keluar?")
-                .setCancelable(false)
-                //Button Keluar
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        finish();
-                        moveTaskToBack(true);
-                        System.exit(0);
-                    }
-                })
-                //Button Batal
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
-                    }
-                });
-        AlertDialog alert = builder.create();
-        alert.show();
-
-    }
-
 }
+
