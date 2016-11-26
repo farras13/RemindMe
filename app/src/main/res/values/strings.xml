@@ -1,3 +1,9 @@
 <resources>
+    //digunakan untuk menyimpan resource atau data text dari item navigasi menu.
     <string name="app_name">RemindMe</string>
+    <string name="openDrawer">Drawer dibuka</string>
+    <string name="closeDrawer">Drawer ditutup</string>
+    <string name="navigation_view_item_1">Home</string>
+    <string name="navigation_view_item_2">Help</string>
+    <string name="navigation_view_item_3">About us</string>
 </resources>
